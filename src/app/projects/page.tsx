@@ -6,7 +6,7 @@ import { pageMeta } from "@/lib/metadata";
 
 export const metadata = pageMeta({
   title: "Our Projects",
-  description: "Browse modular kitchens, wardrobes, living rooms, bedrooms, false ceilings and commercial interiors by AA Interior Design Studio, Chennai.",
+  description: "Browse modular kitchens, wardrobes, living rooms, bedrooms, false ceilings and commercial interiors by Interiors By RB in Pune and Mumbai.",
   path: "/projects",
 });
 

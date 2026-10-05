@@ -19,59 +19,59 @@ export type Project = {
 
 const img = (id: string, alt: string): Img => ({ src: unsplash(id), alt });
 
-// Placeholder projects — replace titles, locations and images with real work.
+// Placeholder projects (titles and locations are illustrative; TODO: verify) — replace titles, locations and images with real work.
 // Real photos: public/images/projects/<slug>/01.jpg ... and swap the `img(...)` calls for "/images/projects/<slug>/01.jpg".
 export const projects: Project[] = [
   {
-    slug: "island-kitchen-medavakkam", title: "Island Kitchen", location: "Medavakkam", type: "kitchen", featured: true,
+    slug: "island-kitchen-pune", title: "Island Kitchen", location: "Koregaon Park, Pune", type: "kitchen", featured: true,
     summary: "An open modular kitchen with a breakfast island and pendant lighting.",
-    cover: img(P.kitchenIsland, "Island modular kitchen in Medavakkam"),
+    cover: img(P.kitchenIsland, "Island modular kitchen in Pune"),
     images: [img(P.kitchenIsland, "Island modular kitchen"), img(P.kitchenWhite, "White kitchen counters"), img(P.kitchenGrey, "Kitchen cabinets and tap")],
   },
   {
-    slug: "u-shaped-kitchen-pallikaranai", title: "U-Shaped Kitchen", location: "Pallikaranai", type: "kitchen",
+    slug: "u-shaped-kitchen-baner", title: "U-Shaped Kitchen", location: "Baner, Pune", type: "kitchen",
     summary: "A compact U-shaped kitchen with open shelving and tall storage.",
-    cover: img(P.kitchenDark, "U-shaped kitchen in Pallikaranai"),
+    cover: img(P.kitchenDark, "U-shaped kitchen in Baner"),
     images: [img(P.kitchenDark, "U-shaped kitchen"), img(P.kitchenGrey, "Kitchen detail")],
   },
   {
-    slug: "walk-in-wardrobe-velachery", title: "Wardrobe Wall", location: "Velachery", type: "wardrobe",
+    slug: "wardrobe-wall-bandra", title: "Wardrobe Wall", location: "Bandra, Mumbai", type: "wardrobe",
     summary: "Floor-to-ceiling wardrobes with open niches and closed storage.",
-    cover: img(P.wardrobeShelf, "Custom wardrobe in Velachery"),
+    cover: img(P.wardrobeShelf, "Custom wardrobe in Bandra"),
     images: [img(P.wardrobeShelf, "Wardrobe with open shelves"), img(P.wardrobeDoor, "Wardrobe doors")],
   },
   {
-    slug: "calm-living-kovilambakkam", title: "Calm Living Room", location: "Kovilambakkam", type: "living", featured: true,
+    slug: "calm-living-kalyani-nagar", title: "Calm Living Room", location: "Kalyani Nagar, Pune", type: "living", featured: true,
     summary: "A neutral living room with warm textures and layered lighting.",
-    cover: img(P.livingCream, "Living room in Kovilambakkam"),
+    cover: img(P.livingCream, "Living room in Kalyani Nagar"),
     images: [img(P.livingCream, "Living room"), img(P.livingBoho, "Living room styling"), img(P.livingGrey, "Seating area")],
   },
   {
-    slug: "modern-living-tambaram", title: "Modern Apartment Living", location: "Tambaram", type: "living",
-    summary: "A bright 3BHK living area with a feature wall and TV unit.",
-    cover: img(P.livingBright, "Modern living room in Tambaram"),
+    slug: "modern-living-powai", title: "Modern Apartment Living", location: "Powai, Mumbai", type: "living",
+    summary: "A bright living area with a feature wall and TV unit.",
+    cover: img(P.livingBright, "Modern living room in Powai"),
     images: [img(P.livingBright, "Bright living room"), img(P.livingModern, "Open-plan living"), img(P.livingBlue, "Sofa and artwork")],
   },
   {
-    slug: "master-bedroom-omr", title: "Master Bedroom", location: "OMR", type: "bedroom", featured: true,
+    slug: "master-bedroom-worli", title: "Master Bedroom", location: "Worli, Mumbai", type: "bedroom", featured: true,
     summary: "A restful master bedroom with an upholstered headboard and statement lighting.",
-    cover: img(P.bedroomTufted, "Master bedroom on OMR"),
+    cover: img(P.bedroomTufted, "Master bedroom in Worli"),
     images: [img(P.bedroomTufted, "Master bedroom"), img(P.bedroomOrange, "Bedroom seating"), img(P.bedroomClassic, "Bedroom bedside")],
   },
   {
-    slug: "guest-bedroom-madipakkam", title: "Guest Bedroom", location: "Madipakkam", type: "bedroom",
+    slug: "guest-bedroom-aundh", title: "Guest Bedroom", location: "Aundh, Pune", type: "bedroom",
     summary: "A simple guest bedroom with bedside storage and warm lighting.",
-    cover: img(P.bedroomLamp, "Guest bedroom in Madipakkam"),
+    cover: img(P.bedroomLamp, "Guest bedroom in Aundh"),
     images: [img(P.bedroomLamp, "Guest bedroom"), img(P.bedroomClassic, "Bed and lamps")],
   },
   {
-    slug: "cove-ceiling-keelkattalai", title: "Layered False Ceiling", location: "Keelkattalai", type: "ceiling",
+    slug: "cove-ceiling-andheri", title: "Layered False Ceiling", location: "Andheri, Mumbai", type: "ceiling",
     summary: "A gypsum false ceiling with recessed spots and cove lighting.",
-    cover: img(P.ceilingRecessed, "False ceiling in Keelkattalai"),
+    cover: img(P.ceilingRecessed, "False ceiling in Andheri"),
     images: [img(P.ceilingRecessed, "False ceiling with lights"), img(P.livingDark, "Ceiling and living area")],
   },
   {
-    slug: "corporate-office-chennai", title: "Corporate Office", location: "Chennai", type: "commercial", featured: true,
+    slug: "corporate-office-pune", title: "Corporate Office", location: "Pune", type: "commercial", featured: true,
     summary: "A corporate office with glass partitions and breakout spaces.",
     cover: img(P.officeHall, "Corporate office interior"),
     images: [img(P.officeHall, "Office corridor"), img(P.officeGlass, "Open workspace"), img(P.officeLounge, "Breakout lounge")],

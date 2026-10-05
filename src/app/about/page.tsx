@@ -1,38 +1,38 @@
 import Image from "next/image";
 import { PageHero, SectionHeading } from "@/components/PageHero";
 import { CTASection } from "@/components/CTASection";
-import { site } from "@/content/site";
-import { reviewThemes } from "@/content/reviews";
+import { citiesLabel, site } from "@/content/site";
 import { P, unsplash } from "@/lib/images";
 import { pageMeta } from "@/lib/metadata";
 
 export const metadata = pageMeta({
   title: "About Us",
-  description: `Founded in Chennai in ${site.founded}, ${site.name} designs and builds complete interiors for homes, offices and retail spaces. ${site.rating.value}★ on Google.`,
+  description: `${site.name}: ${site.yearsExperience}+ years of experience and ${site.projectsCount} projects delivering luxury, turnkey full-home interiors in ${site.cities.join(" and ")}.`,
   path: "/about",
 });
 
 const why = [
-  "End-to-end, hassle-free home interiors with consultation at your home",
-  "Experience on residential projects with leading Chennai builders",
-  "Strong modular kitchen expertise",
-  "Commercial work with Chennai corporates",
-  "Highest standards, within your budget & time",
+  "Luxury design with premium materials and finishes",
+  "Turnkey solutions — design, manufacturing and execution under one team",
+  "Full home interiors, from first sketch to handover",
+  "Experience across apartments, villas and commercial spaces",
+  "Serving homeowners in Pune and Mumbai",
 ];
 
 export default function AboutPage() {
   return (
     <>
-      <PageHero eyebrow="About us" title="Interiors designed in Chennai, since 2013" />
+      <PageHero eyebrow="About us" title={`${site.yearsExperience}+ years of luxury interiors`} />
       <section className="section">
         <div className="container-x grid items-center gap-10 md:grid-cols-2">
           <div className="space-y-5 text-lg leading-relaxed text-muted">
-            <p>Founded in Chennai in {site.founded}, {site.name} designs and builds complete interiors for homes, offices and retail spaces. We start by understanding how you live or work, then bring together colour, materials and layout into a space that feels calm and works hard every day.</p>
-            <p>One team stays with you from the first consultation to the day you move in — design, 3D visualisation, modular manufacturing and on-site execution — so there&apos;s a single point of responsibility for quality, cost and timeline.</p>
+            {/* TODO: verify — copy written from the short brief; replace with the founder's own story */}
+            <p>{site.name} designs luxury interiors and delivers them turnkey. With {site.yearsExperience}+ years in the field and {site.projectsCount} projects completed, we have shaped full homes across {site.cities.join(" and ")}.</p>
+            <p>We start by understanding how you live, then bring together layout, materials and lighting into a home that feels refined and works beautifully every day. One team carries your project from design and 3D visualisation through manufacturing and on-site execution, so quality, cost and timeline have a single point of responsibility.</p>
           </div>
           <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
             {/* /images/team/studio.jpg */}
-            <Image src={unsplash(P.livingBoho)} alt="Interior styled by the AA Interiors team" fill sizes="(min-width:768px) 36rem, 100vw" className="object-cover" />
+            <Image src={unsplash(P.livingBoho)} alt="Luxury interior styled by the Interiors By RB team" fill sizes="(min-width:768px) 36rem, 100vw" className="object-cover" />
           </div>
         </div>
       </section>
@@ -46,13 +46,11 @@ export default function AboutPage() {
             </ul>
           </div>
           <div>
-            <SectionHeading eyebrow="Founder" title={site.founder} />
-            <p className="text-muted">{site.name} is a proprietorship led by {site.founder}, working with a team of {site.teamSize} designers, carpenters and site supervisors. {/* TODO: verify — team size conflicts between sources (11–25 vs 1–10) */}</p>
-            <p className="mt-6 font-semibold">What clients say about us</p>
-            <ul className="mt-3 flex flex-wrap gap-2">
-              {reviewThemes.map((t) => <li key={t} className="rounded-full border border-line px-3 py-1 text-sm">{t}</li>)}
-            </ul>
-            <p lang="ta" className="mt-8 text-2xl text-accent-dark">{site.tamilName}</p>
+            <SectionHeading eyebrow="At a glance" title={citiesLabel} />
+            <dl className="grid grid-cols-2 gap-4">
+              <div className="rounded-2xl border border-line p-5"><dd className="font-heading text-4xl text-accent-dark">{site.yearsExperience}+</dd><dt className="text-sm text-muted">Years of experience</dt></div>
+              <div className="rounded-2xl border border-line p-5"><dd className="font-heading text-4xl text-accent-dark">{site.projectsCount}</dd><dt className="text-sm text-muted">Projects delivered</dt></div>
+            </dl>
           </div>
         </div>
       </section>

@@ -9,7 +9,7 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b border-line bg-bg/90 backdrop-blur">
       <div className="container-x flex h-16 items-center justify-between gap-4">
         <Link href="/" className="font-heading text-2xl font-semibold leading-none">
-          AA <span className="text-accent-dark">Interiors</span>
+          Interiors By <span className="text-accent-dark">RB</span>
         </Link>
         <nav aria-label="Primary" className="hidden items-center gap-6 text-sm font-medium lg:flex">
           {nav.map((n) => (

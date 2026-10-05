@@ -7,7 +7,7 @@ import { pageMeta } from "@/lib/metadata";
 
 export const metadata = pageMeta({
   title: "3D Interior Visualisation",
-  description: "See your home before it's built: photorealistic 3D renders, 360° VR walkthroughs and walkthrough animations from AA Interior Design Studio, Chennai.",
+  description: "See your home before it's built: photorealistic 3D renders, 360° VR walkthroughs and walkthrough animations from Interiors By RB, Pune & Mumbai.",
   path: "/3d-visualisation",
 });
 

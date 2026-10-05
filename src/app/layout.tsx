@@ -12,7 +12,7 @@ const manrope = Manrope({ subsets: ["latin"], variable: "--font-manrope", displa
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
-  title: { default: seo.title, template: "%s | AA Interior Design Studio" },
+  title: { default: seo.title, template: `%s | ${site.name}` },
   description: seo.description,
   keywords: seo.keywords,
   alternates: { canonical: "/" },

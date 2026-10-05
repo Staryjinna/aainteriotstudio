@@ -13,16 +13,16 @@ export const services: Service[] = [
   {
     slug: "complete-home-interiors",
     title: "Complete Home Interiors",
-    short: "Turnkey interiors for 2BHK, 3BHK flats and villas.",
-    long: "One team takes your home from bare shell to move-in ready: design, 3D visualisation, modular manufacturing and on-site execution, with a single point of responsibility for quality, cost and timeline.",
-    image: { src: unsplash(P.livingCream), alt: "Completed living room interior by AA Interiors" }, // /images/services/living.jpg
-    features: ["2BHK, 3BHK & villa packages", "Consultation at your home", "Transparent, itemised quotes", "Single team from design to handover"],
+    short: "Luxury turnkey interiors for apartments, penthouses and villas.",
+    long: "One team takes your home from bare shell to move-in ready: design, 3D visualisation, manufacturing and on-site execution, with a single point of responsibility for quality, cost and timeline.",
+    image: { src: unsplash(P.livingCream), alt: "Completed luxury living room interior" }, // /images/services/living.jpg
+    features: ["Apartments, penthouses & villas", "Consultation at your home", "Transparent, itemised quotes", "Single team from design to handover"],
   },
   {
     slug: "modular-kitchens",
     title: "Modular Kitchens",
-    short: "L, U, parallel and island kitchens — our headline specialty.",
-    long: "Strong modular kitchen expertise built over a decade of Chennai homes. We plan the work triangle, storage and lighting around the way you actually cook, then manufacture to exact measurements.",
+    short: "Luxury modular kitchens in L, U, parallel and island layouts.",
+    long: "Kitchens built on 15+ years of experience. We plan the work triangle, storage and lighting around the way you actually cook, then manufacture to exact measurements.",
     image: { src: unsplash(P.kitchenIsland), alt: "Modular kitchen with island and pendant lights" }, // /images/services/kitchen.jpg
     features: ["L-shape, U-shape, parallel & island layouts", "Soft-close hardware & tall units", "Durable, moisture-resistant materials", "Chimney, hob & appliance planning"],
   },
@@ -37,7 +37,7 @@ export const services: Service[] = [
   {
     slug: "false-ceiling-lighting",
     title: "False Ceiling & Lighting",
-    short: "Layered ceilings and lighting — frequently praised by clients.",
+    short: "Layered ceilings and lighting that set the mood of a room.",
     long: "Gypsum and POP false ceilings with cove, profile and spot lighting that add depth and warmth while keeping the room feeling spacious.",
     image: { src: unsplash(P.ceilingRecessed), alt: "False ceiling with recessed lighting" }, // /images/services/ceiling.jpg
     features: ["Gypsum & POP ceilings", "Cove and profile lighting", "Recessed and decorative fixtures", "Electrical planning included"],
@@ -53,7 +53,7 @@ export const services: Service[] = [
   {
     slug: "pooja-crockery-study-units",
     title: "Pooja, Crockery & Study Units",
-    short: "Compact units for the everyday needs of a Chennai home.", // TODO: verify — common asks, not confirmed with client
+    short: "Compact units for the everyday needs of a home.", // TODO: verify — assumed service, not confirmed with client
     long: "Purpose-built pooja units, crockery cabinets and study units sized to fit your floor plan and finished to match the rest of your interiors.",
     image: { src: unsplash(P.livingBoho), alt: "Styled living room with custom storage" }, // /images/services/units.jpg
     features: ["Pooja units with storage", "Crockery & display cabinets", "Study desks and shelving", "Matching finishes throughout"],
@@ -61,10 +61,10 @@ export const services: Service[] = [
   {
     slug: "commercial-interiors",
     title: "Commercial Interiors",
-    short: "Offices and retail stores for Chennai businesses.",
+    short: "Offices and retail stores for businesses.",
     long: "Workspaces and stores designed for how teams and customers move: efficient layouts, durable finishes and on-time execution that keeps disruption low.",
     image: { src: unsplash(P.officeHall), alt: "Modern office interior" }, // /images/services/commercial.jpg
-    features: ["Offices & corporate fit-outs", "Retail stores", "Space planning", "Experience with Chennai corporates"],
+    features: ["Offices & corporate fit-outs", "Retail stores", "Space planning", "Premium workplace finishes"],
   },
   {
     slug: "3d-visualisation",
