@@ -1,42 +1,45 @@
 /** Single source of truth for business details. Nothing else in the codebase hard-codes these. */
 export const site = {
-  name: "Interiors By RB",
-  brand: "Interiors By RB",
-  handle: "InteriorsByRB",
+  name: "Illam Interiors",
+  brand: "Illam Interiors",
+  tamilName: "இல்லம் இன்டீரியர்ஸ்", // "Illam" (இல்லம்) = home
   // TODO: verify — domain not confirmed
-  url: "https://interiorsbyrb.com",
-  tagline: "Luxury interiors and turnkey solutions for full homes in Pune and Mumbai.",
-  yearsExperience: 15,
-  // TODO: verify — brief said "200+ projects" in one place and "600+ projects" in the bio; using 600+
-  projectsCount: "600+",
-  cities: ["Pune", "Mumbai"],
-  // TODO: verify — the phone number was cut off in the brief; replace the placeholder below
-  phone: "+91 00000 00000",
-  phoneHref: "tel:+910000000000",
-  phoneIntl: "+91-0000000000",
-  whatsappNumber: "910000000000",
-  // TODO: verify — placeholder email
-  email: "hello@interiorsbyrb.com",
-  // TODO: verify — studio addresses not provided
-  hours: "Mon–Sat, 10 am – 7 pm",
-  // TODO: verify — social handles assumed from the brand name
-  socials: {
-    instagram: "https://www.instagram.com/interiorsbyrb/",
-    facebook: "https://www.facebook.com/interiorsbyrb",
+  url: "https://illaminteriors.com",
+  tagline: "Premium interiors in Chennai — traditional craftsmanship and modern modular design, under one roof.",
+  owner: "Mohan",
+  phone: "+91 98408 49658",
+  phoneHref: "tel:+919840849658",
+  phoneIntl: "+91-9840849658",
+  whatsappNumber: "919840849658",
+  // No email supplied yet. When you add one, set it here and show it in Footer/Contact.
+  email: undefined as string | undefined,
+  address: {
+    street: "No.16 Madaveethi Street, Narayanapuram, Pallikaranai",
+    locality: "Chennai",
+    region: "Tamil Nadu",
+    postalCode: "600100",
+    country: "IN",
+    mapQuery: "No.16 Madaveethi Street, Narayanapuram, Pallikaranai, Chennai 600100",
   },
+  // TODO: verify — business hours not supplied
+  hours: "Mon–Sat, 10 am – 7 pm",
+  // TODO: verify — social handles not supplied
+  socials: {} as { instagram?: string; facebook?: string },
+  // TODO: verify — suggested service areas around Pallikaranai
+  serviceAreas: ["Pallikaranai", "Velachery", "Medavakkam", "Sholinganallur", "Adyar", "Besant Nagar", "Anna Nagar", "T. Nagar", "ECR", "OMR"],
 } as const;
 
-export const citiesLabel = site.cities.join(" • ");
+export const fullAddress = `${site.address.street}, ${site.address.locality} ${site.address.postalCode}`;
 
-export const whatsappUrl = (text = "Hi Interiors By RB, I'd like a quote") =>
+export const whatsappUrl = (text = "Hi Illam Interiors, I'd like a quote") =>
   `https://wa.me/${site.whatsappNumber}?text=${encodeURIComponent(text)}`;
 
 export const seo = {
-  title: "Interiors By RB | Luxury Interior Designers in Pune & Mumbai",
-  description: `Luxury full-home interiors & turnkey solutions in Pune and Mumbai. ${site.yearsExperience}+ years of experience, ${site.projectsCount} projects. Free consultation & 3D design.`,
+  title: "Illam Interiors | Premium Traditional & Modular Interior Designers in Chennai",
+  description: `Premium home interiors in Chennai — modular kitchens, wardrobes, vaasakal & carved wood doors, pooja rooms and turnkey homes. Free consultation. Call ${site.phone}.`,
   keywords: [
-    "luxury interior designers Pune", "luxury interior designers Mumbai", "turnkey interiors Pune",
-    "full home interiors Mumbai", "modular kitchen Pune", "wardrobe designers Mumbai",
-    "interior designers Pune", "interior designers Mumbai", "InteriorsByRB",
+    "interior designers in Chennai", "interior designers Pallikaranai", "traditional interiors Chennai",
+    "modular kitchen Chennai", "vaasakal door Chennai", "pooja room design Chennai",
+    "wooden main door Chennai", "turnkey home interiors Chennai", "Illam Interiors",
   ],
 };

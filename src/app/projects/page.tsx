@@ -6,14 +6,14 @@ import { pageMeta } from "@/lib/metadata";
 
 export const metadata = pageMeta({
   title: "Our Projects",
-  description: "Browse modular kitchens, wardrobes, living rooms, bedrooms, false ceilings and commercial interiors by Interiors By RB in Pune and Mumbai.",
+  description: "Browse traditional and modular interiors by Illam Interiors, Chennai — vaasakal, pooja rooms, traditional furniture and modular interiors.",
   path: "/projects",
 });
 
 export default function ProjectsPage() {
   return (
     <>
-      <PageHero eyebrow="Portfolio" title="Our projects" intro="Filter by room type and tap any photo to view it full-screen." />
+      <PageHero eyebrow="Portfolio" title="Our projects" intro="Traditional and modular work side by side. Filter by type and tap any photo to view it full-screen." />
       <section className="section">
         <div className="container-x"><ProjectGrid projects={projects} /></div>
       </section>

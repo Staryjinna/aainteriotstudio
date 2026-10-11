@@ -53,12 +53,12 @@ export function ContactForm() {
         </div>
         <div>
           <label htmlFor="budget" className="text-sm font-medium">Budget (optional)</label>
-          <input id="budget" name="budget" placeholder="e.g. ₹25 lakhs" className={field} />
+          <input id="budget" name="budget" placeholder="e.g. ₹10 lakhs" className={field} />
         </div>
       </div>
       <div>
         <label htmlFor="location" className="text-sm font-medium">Location</label>
-        <input id="location" name="location" required placeholder="e.g. Baner, Pune" aria-invalid={!!err("location")} className={field} />
+        <input id="location" name="location" required placeholder="e.g. Pallikaranai, Chennai" aria-invalid={!!err("location")} className={field} />
         {err("location") && <p className="mt-1 text-sm text-red-700">{err("location")}</p>}
       </div>
       <div>

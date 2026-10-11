@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
   const s = getService(slug);
   if (!s) return {};
-  return pageMeta({ title: `${s.title} in Pune & Mumbai`, description: `${s.short} ${s.long}`.slice(0, 158), path: `/services/${s.slug}`, image: s.image.src });
+  return pageMeta({ title: `${s.title} in Chennai`, description: `${s.short} ${s.long}`.slice(0, 158), path: `/services/${s.slug}`, image: s.image.src });
 }
 
 export default async function ServicePage({ params }: Props) {

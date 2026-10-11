@@ -1,38 +1,38 @@
 import Image from "next/image";
 import { PageHero, SectionHeading } from "@/components/PageHero";
 import { CTASection } from "@/components/CTASection";
-import { citiesLabel, site } from "@/content/site";
-import { P, unsplash } from "@/lib/images";
+import { fullAddress, site } from "@/content/site";
+import { T } from "@/lib/images";
 import { pageMeta } from "@/lib/metadata";
 
 export const metadata = pageMeta({
   title: "About Us",
-  description: `${site.name}: ${site.yearsExperience}+ years of experience and ${site.projectsCount} projects delivering luxury, turnkey full-home interiors in ${site.cities.join(" and ")}.`,
+  description: `${site.name} is a Chennai interior design studio led by ${site.owner}, blending traditional woodwork — vaasakal, pooja rooms, oonjal — with modern modular interiors.`,
   path: "/about",
 });
 
 const why = [
-  "Luxury design with premium materials and finishes",
-  "Turnkey solutions — design, manufacturing and execution under one team",
-  "Full home interiors, from first sketch to handover",
-  "Experience across apartments, villas and commercial spaces",
-  "Serving homeowners in Pune and Mumbai",
+  "Traditional and modular interiors under one roof",
+  "Solid-wood vaasakal, carved doors and pooja rooms",
+  "Modular kitchens and wardrobes made to exact measurements",
+  "Turnkey: design, 3D visualisation, production and installation",
+  "A studio in Pallikaranai — close to the homes we build",
 ];
 
 export default function AboutPage() {
   return (
     <>
-      <PageHero eyebrow="About us" title={`${site.yearsExperience}+ years of luxury interiors`} />
+      <PageHero eyebrow="About us" title="Illam: a home that honours where you come from" intro="In Tamil, illam means home. Our work starts there." />
       <section className="section">
         <div className="container-x grid items-center gap-10 md:grid-cols-2">
           <div className="space-y-5 text-lg leading-relaxed text-muted">
-            {/* TODO: verify — copy written from the short brief; replace with the founder's own story */}
-            <p>{site.name} designs luxury interiors and delivers them turnkey. With {site.yearsExperience}+ years in the field and {site.projectsCount} projects completed, we have shaped full homes across {site.cities.join(" and ")}.</p>
-            <p>We start by understanding how you live, then bring together layout, materials and lighting into a home that feels refined and works beautifully every day. One team carries your project from design and 3D visualisation through manufacturing and on-site execution, so quality, cost and timeline have a single point of responsibility.</p>
+            {/* TODO: verify — copy written from the brief; replace with the owner's own story */}
+            <p>{site.name} is a Chennai interior design studio led by {site.owner}. We design premium homes that carry the warmth of Tamil tradition — carved teak vaasakal, pooja rooms, oonjal swings — alongside the efficiency of modern modular kitchens, wardrobes and storage.</p>
+            <p>One team carries your project from the first site visit and 3D design through carpentry, manufacturing and installation, so quality, cost and timeline have a single point of responsibility.</p>
           </div>
           <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
             {/* /images/team/studio.jpg */}
-            <Image src={unsplash(P.livingBoho)} alt="Luxury interior styled by the Interiors By RB team" fill sizes="(min-width:768px) 36rem, 100vw" className="object-cover" />
+            <Image src={T.hallTrad.src} alt={T.hallTrad.alt} fill sizes="(min-width:768px) 36rem, 100vw" className="object-cover" />
           </div>
         </div>
       </section>
@@ -46,11 +46,11 @@ export default function AboutPage() {
             </ul>
           </div>
           <div>
-            <SectionHeading eyebrow="At a glance" title={citiesLabel} />
-            <dl className="grid grid-cols-2 gap-4">
-              <div className="rounded-2xl border border-line p-5"><dd className="font-heading text-4xl text-accent-dark">{site.yearsExperience}+</dd><dt className="text-sm text-muted">Years of experience</dt></div>
-              <div className="rounded-2xl border border-line p-5"><dd className="font-heading text-4xl text-accent-dark">{site.projectsCount}</dd><dt className="text-sm text-muted">Projects delivered</dt></div>
-            </dl>
+            <SectionHeading eyebrow="Meet the owner" title={site.owner} />
+            <p className="text-muted">{site.owner} leads every project personally, from the first consultation at your home to the day of handover.</p>
+            <p className="mt-6 font-semibold">Studio</p>
+            <p className="text-muted">{fullAddress}</p>
+            <p lang="ta" className="mt-8 text-2xl text-accent-dark">{site.tamilName}</p>
           </div>
         </div>
       </section>

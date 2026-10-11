@@ -34,3 +34,21 @@ export const P = {
   officeGlass: "1497215728101-856f4ea42174",
   officeLounge: "1524758631624-e2822e304c36",
 } as const;
+
+/**
+ * Traditional (Tamil / Chettinad) placeholder photos, stored locally in public/images/traditional.
+ * Sources and licences are listed in src/content/credits.ts and shown at /credits.
+ * Replace each with Illam Interiors' own project photos before launch.
+ */
+export const T = {
+  vaasal: { src: "/images/traditional/vaasakal-carved-door.jpg", alt: "Hand-carved teak double door (vaasakal) with traditional South Indian motifs" },
+  carvedWood: { src: "/images/traditional/carved-door-bracket.jpg", alt: "Carved wooden bracket and door frame detail" },
+  studded: { src: "/images/traditional/studded-door.jpg", alt: "Old studded wooden door with iron fittings" },
+  pooja: { src: "/images/traditional/brass-lamp-peacock.jpg", alt: "Brass diya and peacock lamp glowing in a pooja corner" },
+  brassLamp: { src: "/images/traditional/nilavilakku.jpg", alt: "Traditional brass nilavilakku lamp" },
+  oonjal: { src: "/images/traditional/chettinad-verandah.jpg", alt: "Teak-pillared verandah in a Chettinad home, a traditional setting for an oonjal swing" },
+  hallTrad: { src: "/images/traditional/chettinad-corridor.jpg", alt: "Chettinad corridor with carved teak ceiling and Athangudi tile floor" },
+  pillars: { src: "/images/traditional/chettinad-pillars.jpg", alt: "Teak pillars and chequered floor in a Chettinad mansion" },
+  athangudi: { src: "/images/traditional/athangudi-floor.jpg", alt: "Athangudi tile floor in a traditional Tamil home" },
+  mansion: { src: "/images/traditional/chettinad-mansion.jpg", alt: "Chettinad mansion facade at sunset" },
+} satisfies Record<string, Img>;

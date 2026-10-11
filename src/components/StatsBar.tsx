@@ -2,10 +2,10 @@ import { site } from "@/content/site";
 
 export function StatsBar() {
   const stats = [
-    { value: `${site.yearsExperience}+`, label: "Years of experience" },
-    { value: site.projectsCount, label: "Projects delivered" },
+    { value: "Traditional", label: "Vaasakal, pooja rooms, carved wood" },
+    { value: "Modular", label: "Kitchens, wardrobes, storage" },
     { value: "Turnkey", label: "Design to handover" },
-    { value: site.cities.join(" · "), label: "Cities we serve" },
+    { value: "Chennai", label: site.address.street.split(", ").slice(-1)[0] + " studio" },
   ];
   return (
     <section aria-label="Studio highlights" className="border-b border-line bg-card">

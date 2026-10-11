@@ -2,11 +2,11 @@
 
 @theme {
   --color-bg: #faf7f2;
-  --color-ink: #1f1f1f;
-  --color-accent: #b08d57;
-  --color-accent-dark: #7a5d2e;
-  --color-muted: #6f675f;
-  --color-line: #e7e0d5;
+  --color-ink: #2a2522;
+  --color-accent: #a0642f;
+  --color-accent-dark: #8a5324;
+  --color-muted: #6b625b;
+  --color-line: #e8dfd3;
   --color-card: #ffffff;
   --font-heading: var(--font-cormorant), Georgia, serif;
   --font-body: var(--font-manrope), system-ui, sans-serif;
@@ -22,7 +22,7 @@
 @layer components {
   .btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; border-radius: 9999px; padding: .75rem 1.5rem; font-weight: 600; font-size: .95rem; transition: background-color .2s, color .2s; }
   .btn-primary { background: var(--color-accent-dark); color: #fff; }
-  .btn-primary:hover { background: #6f5430; }
+  .btn-primary:hover { background: #6b3f19; }
   .btn-outline { border: 1px solid currentColor; }
   .btn-outline:hover { background: rgb(255 255 255 / .12); }
   .section { padding-block: 4rem; }
